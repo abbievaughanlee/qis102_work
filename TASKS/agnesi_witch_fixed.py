@@ -1,5 +1,7 @@
 # agnesi_witch.py
 # express maria agnesi's witch function f(x) using the simplified equation where a = 1/2
+# plot the actual function as well as different versions of the power series (each having a different number of terms)
+
 from pathlib import Path
 
 import matplotlib.pyplot as plt

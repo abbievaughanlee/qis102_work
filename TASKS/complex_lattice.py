@@ -1,4 +1,7 @@
 # complex_lattice.py
+# render a scatter plot of the given complex function
+# ensure that the real domain is limited to [-4, 4] and the imaginary domain is limited to [0, 2]
+# calculate and display how many integers there are where |Re(f(z))| <= 10 and |Im(f(z))| <= 10
 from pathlib import Path
 
 import matplotlib.pyplot as plt

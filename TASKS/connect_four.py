@@ -1,4 +1,5 @@
 # connect_four.py
+# simple connect 4 game
 
 
 # note: there are 6 rows, 6 columns, and 6 diagonals with 4+ entries
