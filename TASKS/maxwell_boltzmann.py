@@ -1,5 +1,6 @@
-# maxwell_boltzmann.py: UPDATED
-# fixed problem with graph: combined all lines onto one graph
+# maxwell_boltzmann.py: 
+# calculate and display the probability density function of the Maxwell-Boltzmann distribution
+# display three PDFs using the different parameters 1, 2, and 5
 
 import math
 from pathlib import Path

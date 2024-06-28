@@ -26,7 +26,7 @@ def main():
     omega1_initial = 0.0  # radians/sec
 
     pendulum2_length = 1.0  # meters
-    theta2_initial = np.radians(20)  # degrees
+    theta2_initial = np.radians(30)  # degrees
     omega2_initial = 0.0  # radians/sec
 
     # Precalculate phase constants
@@ -34,8 +34,8 @@ def main():
     phase2_constant = 9.81 / pendulum2_length
 
     # Set model duration (seconds)
-    time_initial = 5
-    time_final = 10
+    time_initial = 7
+    time_final = 9
 
     # Calculate trajectory of 1st pendulum
     sol = solve_ivp(

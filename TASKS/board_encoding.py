@@ -1,4 +1,5 @@
 # board_encoding.py
+# decode tic tac toe boards that utilize base-3
 
 # function to convert a base-10 number to base-3
 def base_three(n):

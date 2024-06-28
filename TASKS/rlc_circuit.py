@@ -1,4 +1,5 @@
 # rlc_circuit.py
+# plot the current over time flowing through an RLC circuit that maintains a constant DC voltage
 
 from pathlib import Path
 

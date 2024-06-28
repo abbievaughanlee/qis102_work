@@ -1,4 +1,5 @@
-# square_wave_instructor.py
+# square_wave.py
+# plot a square wave using superposition of waves. Analyze it with Fourier analysis
 
 from pathlib import Path
 
