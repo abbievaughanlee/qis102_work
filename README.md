@@ -1,6 +1,6 @@
 QIS102 Brookhaven National Laboratory Portfolio
 
-Work completed in BNL's Quantum Information Science 102 three week program.
+Work completed in BNL's Quantum Information Science program.
 
 Topics include: Experimental mathematics, algorithmic efficiency, data visualization, information theory, quantum mechanics, probability and statistics, numerical analysis, complex algebra, classical wave equations, fourier analysis, linear algebra, vector algebra, scientific computing, simulation and modeling, differential equations, monte carlo methods, digital circuits, quantum circuits, and quantum algorithms.
 
