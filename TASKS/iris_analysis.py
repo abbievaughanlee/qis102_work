@@ -1,5 +1,4 @@
 # iris_analysis.py
-import csv
 from pathlib import Path
 
 import matplotlib.pyplot as plt
