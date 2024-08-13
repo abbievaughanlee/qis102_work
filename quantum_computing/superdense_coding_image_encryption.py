@@ -42,24 +42,25 @@ def decode(qubit):
     c_not = np.array([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0]]) # CNOT gate
 
     # decode the first qubit into two bits of information by reversing the entanglement between it and the second qubit
-    sv1 = np.dot(c_not, qubit) # apply the cnot gate 
+    sv1 = np.dot(c_not, qubit) # apply the c-not gate 
     sv2 = np.dot(H_zero, sv1) # apply a hadamard gate to qubit 0
-   
+    sv3 = np.round(sv2.real).astype(int) # save the state vector's real entries
     # decoder:
-    if sv2 == [1, 0, 0, 0]:
-        return '00'
-    elif sv2 == [0,1,0,0]:
-        return '01'
-    elif sv2 == [0,0,1,0]:
-        return '10'
-    elif sv2 == [0,0,0,-1]:
-        return '11'
+    if sv3[0] == 1:
+        return "00"
+    elif sv3[1] == 1:
+        return "10"
+    elif sv3[2] == 1:
+        return "01"
+    elif sv3[3] == 1:
+        return "11"
     else:
-        return '00' 
+        return "00" 
+    
 
-def encode_img(img):
+def encode_img(pic):
     # read the image file
-    file_name = img
+    file_name = pic
     file_path = Path(__file__).parent / file_name
     img = cv2.imread(file_path, 2)
     # define original image dimensions in order to reshape after decoding
@@ -82,16 +83,17 @@ def encode_img(img):
 
 # decodes a series of qubits back into bits of information and returns a string of binary information
 def decode_img(qubit_array):
-    bin_str = ''
+    bin_str = ""
     for i in qubit_array:
-        bin_str += decode(i)
+        to_add = str(decode(i))
+        bin_str += to_add
     return bin_str
 
 def main():
     # encode catcig image, save each of the returned values as separate variables
-    qubits = encode_img("catcig.jpg")[0]
-    height = encode_img("catcig.jpg")[1]
-    width = encode_img("catcig.jpg")[2]
+    qubits = encode_img("cigcat.jpg")[0]
+    height = encode_img("cigcat.jpg")[1]
+    width = encode_img("cigcat.jpg")[2]
 
     # decode the encoded image back into a binary string
     bin_str = decode_img(qubits)
